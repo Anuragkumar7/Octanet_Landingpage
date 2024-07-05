@@ -241,6 +241,7 @@ button {
 }
 
 .footer .footlink li {
+  cursor: pointer;
   margin-bottom: 10px;
 }
 
