@@ -1,0 +1,349 @@
+
+/* General Styles */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+/* Navigation Bar */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  padding: 14px 20px;
+}
+
+.topnav a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: block;
+}
+
+.topnav a:hover {
+  color: #32f55f;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.topnav button a {
+  color: black;
+  text-decoration: none;
+}
+
+.topnav button {
+  color: black;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.logo h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  color: #32f55f;
+}
+
+.topnav button:hover {
+  background-color: #28d94d;
+}
+
+.topnav.responsive {
+  flex-direction: column;
+  position: relative;
+}
+
+.topnav.responsive a,
+.topnav.responsive button {
+  display: block;
+  text-align: left;
+  padding: 14px 20px;
+  width: 100%;
+}
+
+/* Close icon for responsive navigation */
+.topnav .close-icon {
+  display: none;
+  float: right; 
+  padding: 15px;
+  margin-top: -5px; 
+  cursor: pointer;
+}
+
+
+/* Container */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.leftcontainer,
+.rightcontainer {
+  flex: 1;
+  padding: 20px;
+}
+
+.hometext {
+  font-size: 2.5em;
+  color: #32f55f;
+}
+
+.pera p {
+  margin: 20px 0;
+}
+
+.pera button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.pera button:hover {
+  background-color: #32f55f;
+  color: black;
+}
+
+/* Services Section */
+.services {
+  padding: 20px;
+}
+
+.servicestext {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 40px;
+  color: #32f55f;
+}
+
+.allservices {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 0 1 45%;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #32f55f;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.card i {
+  color: #32f55f;
+}
+
+.card p {
+  margin-top: 10px;
+}
+
+/* About Section */
+.about {
+  padding: 40px 20px;
+  background-color: #121212;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.aboutText {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: #32f55f;
+  width: 100%;
+  position: relative;
+}
+
+.aboutText::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #32f55f;
+  margin: 10px auto;
+}
+
+.image {
+  flex: 1;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.contained {
+  flex: 2;
+  margin: 0 20px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer .footerh1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #32f55f;
+  width: 100%;
+}
+
+.footer .footlink {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .footlink h2 {
+  margin-bottom: 10px;
+  color: #32f55f;
+}
+
+.footer .footlink li {
+  margin-bottom: 10px;
+}
+
+.footer .footlink li i {
+  margin-left: 5px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .topnav a:not(:first-child),
+  .topnav button {
+    display: none;
+  }
+
+  .topnav a.icon {
+    display: block;
+  }
+  .topnav.responsive .close-icon {
+    display: block;
+  }
+
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .topnav.responsive button {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .allservices {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1;
+  }
+
+  .about {
+    flex-direction: column;
+  }
+
+  .contained,
+  .image {
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer .footerh1 {
+    margin-bottom: 10px;
+  }
+
+  .footer .footlink {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .footer .footlink h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hometext {
+    font-size: 2em;
+  }
+
+  .pera p {
+    font-size: 0.9em;
+  }
+
+  .servicestext {
+    font-size: 1.5em;
+  }
+
+  .aboutText {
+    font-size: 1.5em;
+  }
+
+  .contained p {
+    font-size: 0.9em;
+  }
+}
